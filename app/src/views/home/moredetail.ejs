@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title><%= title %></title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/home/styles.css" rel="stylesheet" />
+        <script src="/js/home/moredetail.js" defer></script>
+        
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">시설물 상세 정보</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/manager">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">시설물</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">시설물</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">도시 시설물</a></li>
+                                <li><a class="dropdown-item" href="#!">통행 시설물</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/login">로그아웃</a></div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-success py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder"></h1>
+                    <p class="lead fw-normal text-white-50 mb-0"></p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-1 justify-content-center"> 
+                    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-1 row-cols-xl-1 justify-content-center"> 
+                        <div class="card h-100">
+                         <!-- Product image-->
+                            <img class="card-img-top" src=<%= "predict/repair/"+ img %> alt="..." />
+                        </div>
+                    </div>
+                    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-1 justify-content-center"> 
+                            <style type="text/css">
+                            .tg  {background-color:#fdf6e3;border-collapse:collapse;border-color:black;border-spacing:0;border-style:solid;border-width:1px;}
+                            .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+                              padding:10px 5px;word-break:normal;}
+                            .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+                              overflow:hidden;padding:10px 5px;word-break:normal;}
+                            .tg .tg-0lax{text-align:left;vertical-align:top}
+                            .tg .tg-tf2e{text-align:left;vertical-align:top}
+                            </style>
+                            <form action="/moredetail" method="GET">
+                                <table class="tg">
+                                    <thead>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-tf2e">- 민원인 성함:</td>
+                                        <td class="tg-tf2e"><%=users.name %></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-0lax">- 상태:</td>
+                                        <td class="tg-0lax"><%=users.state %></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-0lax">- AI 판단결과:</td>
+                                        <td class="tg-0lax"><%=users.percent %>%</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-tf2e">- 처리상태 </td>
+                                        <td class="tg-tf2e"></td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </form>
+                            <form action="/moredetail">
+                                <input type="radio" name="status" id="status1" value="처리 전" checked/>처리 전
+                                <input type="radio" name="status" id="status2" value="처리 중" />처리 중
+                                <input type="radio" name="status" id="status3" value="처리 완료" />처리 완료
+                                <input type="radio" name="status" id="status4" value="반려" />반려
+
+                           </form>
+                           <input type="submit" value="민원 처리" id="button"/>
+                           
+
+                    </div>
+    
+                    
+                </div>
+               
+
+                    
+            </div>
+            
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-success">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; CNU 2022</p></div>
+        </footer>
+        
+    </body>
+</html>
