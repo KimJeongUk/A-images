@@ -1,24 +1,48 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="/css/home/login.css">
-    <title>A-images</title>
-</head>
-<body>
-    <div class="login-page">
-       
-        <div class="form">
-          홈페이지입니다.
-          </form>
-        </div>
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>A_Images</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- 전체적인 css파일 -->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- 버튼관련 css파일 -->
+		<link href="css/home/btn.css" rel="stylesheet" />
 
-        <div class ="form">
-          <p class="message"><a href="/login">로그인 및 민원제기</a></p>
-        </div>
-    </div>
-</body>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>AI 기반 시설물 관리 시스템</h1>
+						<p>A_Images &nbsp;&bull;&nbsp; 김제현, 강준호, 김정욱</p>
+							<button class="button--brightness" onclick="location.href='/login'"></a>관리자 접속</button>
+							<button class="button--brightness" onclick="location.href='/filecivil'"></a>민원 신고하기</button>
+							<button class="button--brightness"></button>			
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Copyright &copy; CNU 2022</a></span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
 </html>

@@ -1,0 +1,77 @@
+.container-buttons {
+  width: 50vw;
+  justify-content: center;
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 50px;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  display: grid;
+}
+.button span {
+  margin: auto;
+  font-weight: 600;
+  display: block;
+  font-size: 1em;
+}
+
+/*****BUTTON BRIGHTNESS*****/
+
+.back_w{
+  display: inline; 
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  height: 50px; 
+  width: 50px;
+}
+
+.button--brightness {
+  color: #fff;
+  background-color: rgba(76, 175, 80, 0.3);
+  border: 2px solid rgba(67, 160, 71, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: background-color 0.7s;
+  margin: 20px;
+  
+  padding-left: 5.5rem;
+  padding-right: 5.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  font-size: 1.5rem;
+  
+}
+.button--brightness:before, .button--brightness:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  border-radius: 5px;
+  filter: blur(15px);
+  opacity: 0;
+}
+.button--brightness:before {
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate3d(-150%, 0, 0) skew(-15deg);
+}
+.button--brightness:after {
+  top: 0;
+  left: 30px;
+  width: 30px;
+  background-color: rgba(67, 160, 71, 0.4);
+  transform: translate3d(-100px, 0, 0) skew(-15deg);
+}
+.button--brightness:hover {
+  border: 2px solid #fff;
+  background-color: rgba(67, 160, 71, 0.8);
+  transition: background-color 0.1s, color 0.7s 0.1s, border 0.7s;
+}

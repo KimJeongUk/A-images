@@ -48,7 +48,6 @@ for x in files:
 
   #올바른 폴더에 이미지를 저장하기 위한 내용
   usr_db_data = x
-  
 
     #정상
   if((outx.argmax() == 3) or (outx.argmax() == 6) or (outx.argmax() == 9) or (outx.argmax() == 12) or (outx.argmax() == 15) or (outx.argmax() == 18) or (outx.argmax() == 20) or (outx.argmax() == 23) or (outx.argmax() == 25) or (outx.argmax() == 27) or (outx.argmax() == 30) or (outx.argmax() == 33)):
