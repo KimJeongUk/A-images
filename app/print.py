@@ -10,7 +10,7 @@ import pymysql
 import os 
 
 # Load model
-model = load_model('./keras_model.h5')
+model = load_model('./model/keras_model.h5')
 
 #임시폴더 위치
 files = os.listdir('./uploads')
