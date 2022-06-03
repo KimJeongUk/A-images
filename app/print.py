@@ -10,7 +10,7 @@ import pymysql
 import os 
 
 # Load model
-model = load_model('./model/keras_model.h5')
+model = load_model('./Ai_model/keras_model.h5')
 
 #임시폴더 위치
 files = os.listdir('./uploads')
@@ -72,7 +72,7 @@ for x in files:
 conn = pymysql.connect(host='127.0.0.1',user="root", password="123123r", db="userprofile",charset='utf8')
 cur = conn.cursor()
 query = 'UPDATE civil SET percent=%s,state=%s WHERE name ="김정욱"'
-vals = ( outx.max()*100, state)
+vals = ( outx.max()*99, state)
 cur.execute(query,vals)
 conn.commit()
 conn.close()
