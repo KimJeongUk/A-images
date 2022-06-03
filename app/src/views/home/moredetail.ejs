@@ -18,6 +18,15 @@
               font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
             .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
             </style>
+          <style>
+            .outer {
+                    display: flex;
+                    justify-content: center;
+                  }
+          
+          .outer,.inner {position: relative;}
+          .absolut {position:absolute;bottom: 0;right: 0;}
+          </style>
         <script src="/js/home/moredetail.js" defer></script>
         
     </head>
@@ -39,62 +48,73 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-success py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder"></h1>
-                    <p class="lead fw-normal text-white-50 mb-0"></p>
-                </div>
-            </div>
-        </header>
+        
         <!-- Section-->
-        <table class="tg">
-            <thead>
-              <tr>
-                <td class="tg-0pky"><img width = 500px height= 600px class="card-img-top" src=<%= "predict/repair/"+ img %> alt="..." /></td>
-                <td class="tg-0lax">
-                    <form action="/moredetail" method="GET">
-                        <table class="tg">
-                            <thead>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td class="tg-0pky">- 민원인 성함:</td>
-                                <td class="tg-0pky"><%=users.name %></td>
-                              </tr>
-                              <tr>
-                                <td class="tg-0lax">- AI가 판단한 상태:</td>
-                                <td class="tg-0lax"><%=users.state %></td>
-                              </tr>
-                              <tr>
-                                <td class="tg-0lax">- AI 판단결과:</td>
-                                <td class="tg-0lax"><%=users.percent %>%</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-0lax">- 처리상태 </td>
-                                <td class="tg-0lax"> >>> </td>
-                              </tr>
-                              
-                            </tbody>
-                        </table>
-                    </form>
-                </td>
-                <td class="tg-0lax">
-                    <form action="/moredetail">
-                        <input type="radio" name="status" id="status1" value="처리 전" checked/>처리 전
-                        <input type="radio" name="status" id="status2" value="처리 중" />처리 중
-                        <input type="radio" name="status" id="status3" value="처리 완료" />처리 완료
-                        <input type="radio" name="status" id="status4" value="반려" />반려
-                   </form>
-                </td>
-                <td class="tg-0lax"> <input type="submit" value="민원 처리" id="button"/></td>
-              </tr>
-            </thead>
-        </table>
+        <header class="bg-success py-5">
+          <div class="container px-4 px-lg-5 my-5">
+              <div class="text-center text-white">
+                  <h1 class="display-4 fw-bolder"></h1>
+                  <p class="lead fw-normal text-white-50 mb-0"></p>
+              </div>
+          </div>
+        </header>
+        
+       <div class ="outer">
+       
+        <section>
+          <div class="inner">
+         
+            <table class="tg">
+              <thead>
+                <tr>
+                  <td class="tg-0pky"><img width = 500px height= 600px class="card-img-top" src=<%= "predict/repair/"+ img %> alt="..." /></td>
+                  <td class="tg-0lax">
+                      <form action="/moredetail" method="GET">
+                          <table class="tg">
+                              <thead>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="tg-0pky">- 시설물 종류</td>
+                                  <td class="tg-0pky"><%=users.kind %></td>
+                                </tr>
+                                <tr>
+                                  <td class="tg-0lax">- AI가 판단한 상태:</td>
+                                  <td class="tg-0lax"><%=users.state %></td>
+                                </tr>
+                                <tr>
+                                  <td class="tg-0lax">- AI 판단결과:</td>
+                                  <td class="tg-0lax"><%=users.percent %>%</td>
+                                </tr>
+                                <tr>
+                                  <td class="tg-0lax">- 처리상태 </td>
+                                  <td class="tg-0lax"> >>> </td>
+                                </tr>
+                                
+                              </tbody>
+                          </table>
+                      </form>
+                  </td>
+                  <td class="tg-0lax">
+                      <form action="/moredetail">
+                          <input type="radio" name="status" id="status1" value="처리 전" checked/>처리 전
+                          <input type="radio" name="status" id="status2" value="처리 중" />처리 중
+                          <input type="radio" name="status" id="status3" value="처리 완료" />처리 완료
+                          <input type="radio" name="status" id="status4" value="반려" />반려
+                     </form>
+                  </td>
+                  <td class="tg-0lax"> <input type="submit" value="민원 처리" id="button"/></td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </section>
+        
+    </div>
         
         <!-- Footer-->
         <footer class="py-5 bg-success">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; CNU 2022</p></div>
+          <div class="container"><p class="m-0 text-center text-white">Copyright &copy; CNU 2022</p></div>
         </footer>
         
     </body>
