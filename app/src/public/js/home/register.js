@@ -29,6 +29,10 @@ function register(){
     {
         return alert("내용을 입력해주십시오");
     }
+    if(!place.value)
+    {
+        return alert("주소를 입력해주십시오");
+    }
 
     
     
