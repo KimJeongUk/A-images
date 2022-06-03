@@ -5,10 +5,8 @@ const email = document.querySelector("#email");
 const number = document.querySelector("#number");
 const image = document.querySelector("#image");
 const comment = document.querySelector("#comment");
+const place = document.querySelector("#place");
 const registerbtn = document.querySelector("#button-blue");
-
-
-
 registerbtn.addEventListener("click", register);
 
 function register(){
@@ -31,6 +29,8 @@ function register(){
     {
         return alert("내용을 입력해주십시오");
     }
+
+    
     
 
     const req ={
@@ -39,7 +39,8 @@ function register(){
         email: email.value,
         comment: comment.value,
         image : image.value,
-    };
+        place : place.value,
+    };  
 
     
     
