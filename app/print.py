@@ -62,7 +62,7 @@ for x in files:
     state ="수리"
     
   #교체폐기
-  elif((ourx.armax() == 2 )or (outx.argmax() == 5) or (outx.argmax() == 8) or (outx.argmax() == 11) or (outx.argmax() == 14) or (outx.argmax() == 17) or (outx.argmax() == 19) or (outx.argmax() == 22) or (outx.argmax() == 24) or (outx.argmax() == 26) or (outx.argmax() == 29) or (outx.argmax() == 32) or (outx.argmax() == 34)):
+  elif((outx.argmax() == 2 )or (outx.argmax() == 5) or (outx.argmax() == 8) or (outx.argmax() == 11) or (outx.argmax() == 14) or (outx.argmax() == 17) or (outx.argmax() == 19) or (outx.argmax() == 22) or (outx.argmax() == 24) or (outx.argmax() == 26) or (outx.argmax() == 29) or (outx.argmax() == 32) or (outx.argmax() == 34)):
     user_data_path = ("./src/public/predict/replacement/"+ str(outx.argmax()) )+ "_"+ usr_db_data  
     state = "교체폐기"
     
