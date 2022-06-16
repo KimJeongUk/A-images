@@ -20,3 +20,6 @@ NodeJS Express를 이용한 웹서버를 통해 모듈들 연결
 
 ### DB
 관리자 Table, 민원 접수 용 Table을 위해 SQL을 사용하기 위해 MYSQL 사용
+
+### 지도 
+지도를 사용하기 위해 카카오 지도 API 사용
