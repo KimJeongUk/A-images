@@ -12,7 +12,8 @@
 
 ### 웹 브라우저 및 웹 서버
 MVC 패턴을 입각하여 User라는 Model을 설정해주고 Controller를 통해 다양한 요청을 처리하며 View에 표현해 주었다.
-NodeJS를 이용한 웹서버를 통해 모듈들 연결
+
+NodeJS Express를 이용한 웹서버를 통해 모듈들 연결
 
 ### AI 모델
 추후에 고속도로나 일상 CCTV 같은 이동식 카메라에도 모델을 적용하고자 임베디드 시스템을 사용하기 위해 Depthwise Separable Convolution 기법을 사용해 가벼운 모델인 MobileNet을 사용 
